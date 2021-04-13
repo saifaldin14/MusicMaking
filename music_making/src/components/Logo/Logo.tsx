@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import "./style.css";
 
-const Logo: FunctionComponent = () => {
+export const Logo: FunctionComponent = () => {
   return (
     <h1 className="logo">
       <span role="img" aria-label="metal hand emoji">
@@ -16,5 +16,3 @@ const Logo: FunctionComponent = () => {
     </h1>
   );
 };
-
-export default Logo;
