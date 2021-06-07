@@ -4,7 +4,7 @@ import { useInstrument } from "../../state/Instrument";
 import { options } from "./options";
 import "./style.css";
 
-const InstrumentSelector: FunctionComponent = () => {
+export const InstrumentSelector: FunctionComponent = () => {
   const { instrument, setInstrument } = useInstrument();
   const updateValue = ({ target }: ChangeEvent<HTMLSelectElement>) =>
     setInstrument(target.value as InstrumentName);
@@ -19,5 +19,3 @@ const InstrumentSelector: FunctionComponent = () => {
     </select>
   );
 };
-
-export default InstrumentSelector;
