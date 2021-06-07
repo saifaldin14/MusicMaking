@@ -1,16 +1,16 @@
-import React, { FunctionComponent, ReactEventHandler } from "react";
-import clsx from "clsx";
-import { NoteType } from "../../domain/note";
-import { usePressObserver } from "../PressObserver";
-import "./style.css";
+import React, { FunctionComponent, ReactEventHandler } from "react"
+import clsx from "clsx"
+import { NoteType } from "../../domain/note"
+import { usePressObserver } from "../PressObserver"
+import "./style.css"
 
 interface KeyProps {
-  type: NoteType;
-  label: string;
-  disabled?: boolean;
+  type: NoteType
+  label: string
+  disabled?: boolean
 
-  onUp: ReactEventHandler<HTMLButtonElement>;
-  onDown: ReactEventHandler<HTMLButtonElement>;
+  onUp: ReactEventHandler<HTMLButtonElement>
+  onDown: ReactEventHandler<HTMLButtonElement>
 }
 
 export const Key: FunctionComponent<KeyProps> = ({
@@ -23,8 +23,8 @@ export const Key: FunctionComponent<KeyProps> = ({
   const pressed = usePressObserver({
     watchKey: label,
     onStartPress: onDown,
-    onFinishPress: onUp,
-  });
+    onFinishPress: onUp
+  })
 
   return (
     <button
@@ -36,5 +36,5 @@ export const Key: FunctionComponent<KeyProps> = ({
     >
       {label}
     </button>
-  );
-};
+  )
+}

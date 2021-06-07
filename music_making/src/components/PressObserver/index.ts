@@ -1,1 +1,1 @@
-export * from "./usePressObserver";
+export * from "./usePressObserver"
